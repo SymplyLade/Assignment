@@ -1,0 +1,12 @@
+# Create a Unique Voters Registration Form
+voters = set()
+while True:
+    name = input("Enter voter's name ( or 'done' to finish):")
+    if name.lower() == "done":
+        break
+    if name in voters:
+        print("* This Voter is already registered!")
+    else:
+        voters.add(name)
+        print(f"{name} registered successfully!.")
+        print("\nTotal Unique Voters:", len(voters))
